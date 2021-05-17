@@ -1,0 +1,267 @@
+.container{
+  max-width: 100%;
+  &.comics{
+    background-color: #1D1D1D;
+    .row{
+      .col-lg-12{
+        position: relative;
+        .current{
+          color: $color-white;
+          position: absolute;
+          top: -5%;
+          left: 10%;
+          background-color: $color-primary;
+          padding: 9px 20px;
+        }
+        padding: $padding-10-col;
+        @include flex-row-wrap;
+        padding-top: 30px;
+        .comic{
+          cursor: pointer;
+          width: 170px;
+          @include flex-col-start;
+          margin: 10px;
+          .copertina{
+            height: 170px;
+            width: 170px;
+            overflow: hidden;
+            img{
+            }
+          }
+          p{
+            margin-top: 10px;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: $color-white;
+          }
+        }
+      }
+      .col-12{
+        @include flex-r-c-c;
+        padding-bottom: 30px;
+        button{
+          border: 0px;
+          color: $color-white;
+          background-color: $color-primary;
+          padding: 5px 30px;
+          font-size: 13px;
+        }
+      }
+    }
+  }
+  &.secondo_menu{
+    height: 100px;
+    background-color: $color-primary;
+    color: white;
+    .row{
+      height: 100%;
+      .col-lg-12{
+        height: 100%;
+        padding: $padding-10-col;
+        @include flex-r-c-c;
+        .items{
+          @include flex-r-c-c;
+          height: 100%;
+          margin: 0 30px;
+          img{
+            height: 40px;
+          }
+          #visa{
+            height: 25px;
+          }
+          p{
+            display: inline-block;
+            font-size: 12px;
+            margin-bottom: 0px;
+            margin-left: 6px;
+          }
+        }
+      }
+    }
+    &.singlepage{
+        background-color: grey;
+        .row{
+          border-top: 1px solid white;
+          .col-lg-12{
+            height: 100%;
+            padding: $padding-10-col;
+            @include flex-r-c-c;
+            .items{
+              @include flex-r-c-c;
+              height: 100%;
+              margin: 0px;
+              width: 200px;
+              border-left: 1px solid white;
+              border-right: 1px solid white;
+              img{
+                height: 40px;
+              }
+              #visa{
+                height: 25px;
+              }
+              p{
+                display: inline-block;
+                font-size: 12px;
+                margin-bottom: 0px;
+                margin-left: 6px;
+            }
+          }
+        }
+      }
+    }
+  }
+  &.single_comic{
+    min-height: 400px;
+    padding: $padding-18;
+    position: relative;
+    .row{
+      .col-lg-8{
+        padding-top: 70px;
+        .img_comic{
+          width: 100%;
+          background-color: $color-primary;
+          height: 50px;
+          position: absolute;
+          top: -50px;
+          left: 0;
+          img{
+            height: 170px;
+            width: auto;
+            position: absolute;
+            top: -137px;
+            left: 15%;
+          }
+        }
+        h3{
+        }
+        .bar{
+          height: 38px;
+          background-color: #58BA59;
+          border-bottom: 1px solid $color-black;
+          @include flex-row-spbetw;
+          .price-bar{
+            border-right: 1px solid $color-black;
+            width: 100%;
+            padding: 0 20px;
+            @include flex-r-spacebet-c;
+            span{
+              color: lightgreen;
+              font-size: 12px;
+              small{
+                color: $color-white;
+              }
+            }
+          }
+          .dropdown{
+            button{
+              background-color: #58BA59;
+              color: $color-white;
+              font-size: 13px;
+              border: 0px;
+              padding-top: 9px;
+            }
+          }
+
+        }
+        .trama{
+          padding-top: 20px;
+          margin-bottom: 50px;
+        }
+      }
+      .col-lg-4{
+        padding-top: 40px;
+        @include flex-col-end;
+        h4{
+          font-size: 17px;
+        }
+        img{
+          height: 230px;
+        }
+      }
+    }
+  }
+  &.scheda{
+    height: 350px;
+    padding-top: 60px;
+    background-color: #F6F6F6;
+    .row{
+      padding: $padding-10-col;
+      .col-lg-6{
+        padding: 0 20px;
+        h3{
+          font-size: 25px;
+        }
+        .artisti{
+          min-height: 80px;
+          width: 100%;
+          border-top: 1px solid $color-grey;
+          border-bottom: 1px solid $color-grey;
+          @include flex-row-spbetw;
+          p{
+            margin-bottom: 0px;
+            font-size: 14px;
+          }
+          small{
+            color: #77CEF1;
+          }
+        }
+        .writers{
+          width: 100%;
+          min-height: 80px;
+          border-bottom: 1px solid $color-grey;
+          @include flex-row-spbetw;
+          p{
+            margin-bottom: 0px;
+            font-size: 14px;
+          }
+          small{
+            color: #77CEF1;
+            font-size: 14px;
+          }
+        }
+        .serie{
+          min-height: 35px;
+          border-top: 1px solid $color-grey;
+          border-bottom: 1px solid $color-grey;
+          @include flex-r-start-c;
+          p{
+            font-size: 14px;
+            margin-bottom: 0px;
+          }
+          small{
+            color: #77CEF1;
+            font-size: 14px;
+            text-transform: uppercase;
+            margin-left: 150px;
+          }
+        }
+        .prezzo{
+          min-height: 35px;
+          border-bottom: 1px solid $color-grey;
+          @include flex-r-start-c;
+          p{
+            font-size: 14px;
+            margin-bottom: 0px;
+          }
+          small{
+            font-size: 14px;
+            margin-left: 63px;
+          }
+        }
+        .sale{
+          min-height: 35px;
+          border-bottom: 1px solid $color-grey;
+          @include flex-r-start-c;
+          p{
+            font-size: 14px;
+            margin-bottom: 0px;
+          }
+          small{
+            font-size: 14px;
+            margin-left: 52px;
+          }
+        }
+      }
+    }
+  }
+}

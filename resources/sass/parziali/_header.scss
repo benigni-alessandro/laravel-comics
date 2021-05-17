@@ -1,0 +1,112 @@
+.container{
+  max-width: 100%;
+  &.control{
+    height: 20px;
+    .row{
+      height: 100%;
+      .col-12{
+        padding: $padding-10-col;
+        background-color: $color-primary;
+        @include flex-r-end-c;
+        height: 100%;
+        .adj{
+          @include flex-r-end-c;
+          height: 100%;
+          a{
+            color: $color-white;
+            text-decoration: none;
+            font-size: $fontsize-10;
+            margin-left: 40px;
+          }
+        }
+      }
+    }
+  }
+  &.navbar-control{
+    height: 96px;
+    .row{
+      .col-12{
+        padding: $padding-10-col;
+        background-color: $color-white;
+        .navbar.navbar-expand-lg{
+          .container-fluid{
+            padding: 0;
+            height: 100%;
+            .navbar-brand{
+              img{
+                height: 70px;
+                width: 70px;
+                margin-right: 20px;
+              }
+            }
+            .collapse.navbar-collapse{
+              .navbar-nav{
+                li{
+                  margin-right: 17px;
+                  a{
+                    color: $color-black;
+                    font-size: 13px;
+                    font-weight: bold;
+                    &.active{
+                      color: $color-primary;
+                      position: relative;
+                      &::after{
+                        content: "";
+                        color: $color-primary;
+                        border-bottom: solid 5px $color-primary;
+                        width: 80%;
+                        position: absolute;
+                        left: 12%;
+                        top: 61px;
+                      }
+                    }
+                  }
+                }
+              }
+              .input-group{
+                border: 0px;
+                width: 150px;
+                border-bottom: 3px solid $color-primary;
+                height: 25px;
+
+                input.form-control{
+                  border: 0;
+                  padding-left: 75px;
+                  padding-right: 0px;
+                  color: $color-black;
+                  font-size: 15px;
+                  &:focus{
+                    box-shadow: 0 0 0 0;
+                  }
+                }
+                span.input-group-text{
+                  background-color: white;
+                  border: 0px;
+                  padding-right: 0px;
+                  padding-left: 8px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &.jumbo{
+    height: 350px;
+    .row{
+      height: 100%;
+      .col-12{
+        height: 100%;
+        padding: 0;
+        .bg-jumbo{
+          height: 100%;
+          background-image: url('/../img/jumbo.jpg');
+          background-repeat: no-repeat;
+          background-position: center top;
+          background-size: cover;
+        }
+      }
+    }
+  }
+}
